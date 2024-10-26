@@ -1,0 +1,7 @@
+<h2>Parent Component</h2>
+<p>Employee Name (Primitive): {{ employeeName }}</p>
+<p>Employee Info (Object): {{ employeeData.name }} - {{ employeeData.position }}</p>
+<button (click)="updateEmployeeName()">Update Employee Name</button>
+<button (click)="updateEmployeeData()">Update Employee Data</button>
+
+<app-child [employeeName]="employeeName" [employeeData]="employeeData"></app-child>
