@@ -1,0 +1,11 @@
+Change Detection: OnPush in the child component optimizes performance by only re-rendering when a new object reference is detected or an internal event triggers it.
+Hierarchical DI: Separate instances of EmployeeService allow for localized data updates within the component hierarchy, which is beneficial for managing isolated states.
+Change Detection Strategies: Explanation
+Default Strategy: Checks for changes in the entire component tree; useful when frequent updates are needed.
+OnPush Strategy: Only checks when an @Input reference changes or an event originates within the component. This optimizes performance by reducing unnecessary checks.
+Hierarchical Dependency Injection: Explanation
+Definition: Hierarchical DI allows services to be injected at different component levels, making it possible to provide different instances of a service at different levels of the component tree.
+Use Cases: Use this for components that need distinct configurations or isolated instances of a service, like multi-instance forms or specific configurations for child components.
+Step 6: Summarize Performance Benefits and Use Cases
+Change Detection: OnPush is ideal for large applications with complex data models where unnecessary change detection checks can be avoided for performance gains.
+Hierarchical DI: Effective in scenarios where you need separate instances for specific components to encapsulate functionality or manage state more locally.
